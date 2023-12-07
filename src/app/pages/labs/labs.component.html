@@ -1,0 +1,16 @@
+<div class="container">
+  <h1>Mi proyecto en platzi</h1>
+  <ul>
+    <p>total: {{tasks().length}}</p>
+    <li *ngFor="let task of tasks() index as i">
+      {{i+1}} {{task}}
+    </li>
+  </ul>
+  <p>Hola {{name()}}</p>
+
+  <button (click)="clickHandler()">click me</button> 
+  <button (dblclick)="clickHandler()">double click me</button>  
+  <h1>Signals</h1>
+  <input type="text" [value]="name()" (change)="changeHandler($event)"> 
+</div>
+
